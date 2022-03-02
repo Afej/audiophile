@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
-// colors
-$primary: #d87d4a;
-$secondary: #fbaf85;
-$black: #000000;
-$black_alt: #101010;
-$white: #ffffff;
-$gray_one: #f1f1f1;
-$gray_two: #fafafa;
-$error: #cd2c2c;
+:root {
+  // colors
+  --primary: #d87d4a;
+  --secondary: #fbaf85;
+  --black: #000000;
+  --black-alt: #101010;
+  --white: #ffffff;
+  --gray-one: #f1f1f1;
+  --gray-two: #fafafa;
+  --error: #cd2c2c;
+}
 
 * {
   margin: 0;
@@ -23,6 +25,7 @@ body {
   line-height: 25px;
   font-size: 15px;
   height: 100vh;
+  color: var(--black);
 }
 
 ul {
@@ -31,6 +34,11 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 // texts
@@ -98,39 +106,51 @@ h6 {
 
 // buttons
 button {
+  font-weight: 700;
+  line-height: 18px;
   text-transform: uppercase;
   transition: all 500ms ease-in-out;
+  padding: 15px 30px;
   cursor: pointer;
 
   &.btn-primary {
-    background-color: $primary;
-    color: $white;
+    background-color: var(--primary);
+    color: --white;
     border: none;
 
     &:hover {
-      background-color: $secondary;
-      color: $white;
+      background-color: var(--secondary);
+      color: var(--white);
       opacity: 0.8;
     }
   }
 
   &.btn-secondary {
-    background-color: $white;
-    border: 1px solid $black;
-    color: $black;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    color: var(--black);
 
     &:hover {
-      background-color: $black;
-      color: $white;
+      background-color: var(--black);
+      color: var(--white);
     }
   }
 
   &.btn-alt {
     background-color: transparent;
-    color: $gray_one;
+    color: var(--black);
+    opacity: 0.5;
+    font-size: 13px;
+    line-height: 18px;
+
+    span {
+      color: var(--primary);
+      font-size: 20px;
+      opacity: 1;
+    }
 
     &:hover {
-      color: $primary;
+      color: var(--primary);
     }
   }
 }
@@ -149,22 +169,22 @@ button {
   input,
   textarea,
   select {
-    background: $white;
+    background: var(--white);
     width: 100%;
     padding: 18px 24px 19px auto;
     border: 1px solid #cfcfcf;
     border-radius: 8px;
-    color: $black;
+    color: var(--black);
     opacity: 0.4;
     //   margin-bottom: 10px;
 
     &:active {
-      border: 1px solid $primary;
+      border: 1px solid var(--primary);
       opacity: 1;
     }
 
     &.error {
-      border: 2px solid $error;
+      border: 2px solid var(--error);
     }
   }
 
@@ -172,10 +192,15 @@ button {
     // text-align: left;
     display: block;
     margin: 0 0 5px 3px;
-    color: $black;
+    color: var(--black);
 
     &.error {
-      color: $error;
+      color: var(--error);
     }
   }
+}
+
+.wrapper {
+  max-width: 85vw;
+  margin: 0 auto;
 }
