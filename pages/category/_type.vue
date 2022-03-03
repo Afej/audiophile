@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- hero section -->
-    <div class="hero bg-black text-white">
+    <div class="hero bg-black">
       <main-header />
 
-      <div class="wrapper pt-28 text-center">
+      <div class="wrapper pt-28 text-center text-white">
         <h2>
           {{ this.$route.params.type }}
         </h2>
@@ -29,7 +29,7 @@
             balanced depth and precision of studio-quality sound.
           </p>
 
-          <button class="btn-primary text-white">
+          <button class="btn-primary">
             <nuxt-link to="/product/"> See Product </nuxt-link>
           </button>
         </div>
@@ -44,7 +44,7 @@
             engineers, and music aficionados alike in studios and on the go.
           </p>
 
-          <button class="btn-primary text-white">
+          <button class="btn-primary">
             <nuxt-link to="/product/"> See Product </nuxt-link>
           </button>
         </div>
@@ -68,7 +68,7 @@
         <div class="content flex flex-col items-start">
           <h1>
             XX59 <br />
-             Headphones
+            Headphones
           </h1>
           <p class="text">
             As the gold standard for headphones, the classic XX99 Mark I offers
@@ -76,7 +76,7 @@
             engineers, and music aficionados alike in studios and on the go.
           </p>
 
-          <button class="btn-primary text-white">
+          <button class="btn-primary">
             <nuxt-link to="/product/"> See Product </nuxt-link>
           </button>
         </div>
@@ -103,7 +103,10 @@ main {
   .product-image {
     width: 540px;
     height: 560px;
-    border-radius: 8px;
+
+    img {
+      border-radius: 8px;
+    }
   }
 
   .content {
@@ -122,6 +125,12 @@ main {
     p.text {
       width: 398px;
       margin-bottom: 40px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    .content {
+      padding-left: 0;
     }
   }
 }

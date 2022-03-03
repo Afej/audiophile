@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- hero section -->
-    <div class="hero text-white">
+    <div class="hero">
       <main-header />
 
       <div class="wrapper">
-        <div class="hero-content flex flex-col items-start">
-          <p class="overline">NEW PRODUCT</p>
+        <div class="hero-content flex flex-col items-start text-white">
+          <p class="overline opacity-50">NEW PRODUCT</p>
           <h1>XX99 Mark II Headphones</h1>
-          <p class="text">
+          <p class="text opacity-75">
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
@@ -115,6 +115,7 @@ export default Vue.extend({
     }
 
     p.text {
+      width: 350px;
       margin-bottom: 40px;
     }
   }

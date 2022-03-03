@@ -1,9 +1,9 @@
 <template>
-  <div class="wrapper categories flex items-center justify-between">
+  <section class="wrapper categories flex items-center justify-between">
     <category />
     <category />
     <category />
-  </div>
+  </section>
 </template>
 
 <script>

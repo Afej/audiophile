@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper more-info flex items-center justify-between gap-8">
+  <section class="wrapper more-info flex items-center justify-between gap-8">
     <div class="content">
       <h2 class="text-black mb-8">
         Bringing you the <br />
@@ -20,7 +20,7 @@
         alt="best gear"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

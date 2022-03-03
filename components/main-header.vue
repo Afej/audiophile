@@ -4,7 +4,8 @@
       <nuxt-link to="/" class="logo mr-48 cursor-pointer">
         <img src="@/assets/images/shared/desktop/logo.svg" alt="audiophile" />
       </nuxt-link>
-      <ul class="nav flex items-center justify-between">
+      
+      <ul class="nav flex items-center justify-between text-white">
         <li>
           <nuxt-link to="/"> Home </nuxt-link>
         </li>

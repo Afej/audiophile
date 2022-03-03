@@ -35,10 +35,12 @@ export default Vue.extend({
   border-radius: 8px;
   width: 100%;
   height: 204px;
+  padding-bottom: 10px;
+  z-index: 1;
 
   &-img {
     position: absolute;
-    top: -60px;
+    top: -75px;
     // left: 30%;
     width: 200px;
     height: 200px;
