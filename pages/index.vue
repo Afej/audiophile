@@ -5,7 +5,7 @@
       <main-header />
 
       <div class="wrapper">
-        <div class="hero-content flex flex-col items-start justify-start">
+        <div class="hero-content flex flex-col items-start">
           <p class="overline">NEW PRODUCT</p>
           <h1>XX99 Mark II Headphones</h1>
           <p class="text">
@@ -13,93 +13,74 @@
             made for the passionate music enthusiast.
           </p>
 
-          <button class="btn-primary">See Product</button>
+          <button class="btn-primary">
+            <nuxt-link to="/product/"> See Product </nuxt-link>
+          </button>
         </div>
       </div>
     </div>
+    <main>
+      <categories />
 
-    <section class="wrapper flex items-center justify-between categories">
-      <category />
-      <category />
-      <category />
-    </section>
+      <!-- products -->
+      <section class="wrapper products flex flex-col justify-between gap-10">
+        <div class="zx9 relative flex justify-end items-center overflow-hidden">
+          <div class="patterns absolute">
+            <img
+              src="@/assets/images/home/desktop/pattern-circles.svg"
+              alt="circles"
+            />
+          </div>
 
-    <section class="wrapper products flex flex-col justify-between gap-10">
-      <div class="zx9 relative flex justify-end items-center overflow-hidden">
-        <div class="patterns absolute">
-          <img
-            src="@/assets/images/home/desktop/pattern-circles.svg"
-            alt="circles"
-          />
+          <div class="zx9-img absolute -bottom-3">
+            <img
+              src="@/assets/images/home/desktop/image-speaker-zx9.png"
+              alt="speaker zx9"
+            />
+          </div>
+
+          <div class="content">
+            <h1 class="mb-6 text-white">
+              ZX9 <br />
+              speaker
+            </h1>
+            <p class="opacity-75 text-white mb-10">
+              Upgrade to premium speakers that are phenomenally built to deliver
+              truly remarkable sound.
+            </p>
+
+            <button class="bg-black text-white">
+              <nuxt-link to="/product/"> See Product </nuxt-link>
+            </button>
+          </div>
         </div>
 
-        <div class="zx9-img absolute -bottom-3">
-          <img
-            src="@/assets/images/home/desktop/image-speaker-zx9.png"
-            alt="speaker zx9"
-          />
+        <div class="zx7 flex flex-col items-start justify-center">
+          <h4 class="text-black mb-9">ZX7 speaker</h4>
+
+          <button class="btn-secondary">
+            <nuxt-link to="/product/"> See Product </nuxt-link>
+          </button>
         </div>
 
-        <div class="content">
-          <h1 class="mb-6 text-white">
-            ZX9 <br />
-            speaker
-          </h1>
-          <p class="opacity-75 text-white mb-10">
-            Upgrade to premium speakers that are phenomenally built to deliver
-            truly remarkable sound.
-          </p>
+        <div class="yx1 flex items-center justify-between gap-10">
+          <div class="earphone-img">
+            <img
+              src="@/assets/images/home/desktop/image-earphones-yx1.jpg"
+              alt="earphone yx1"
+            />
+          </div>
 
-          <button class="bg-black text-white">See product</button>
+          <div class="content flex flex-col items-start justify-center">
+            <h4 class="text-black mb-8">YX1 earphones</h4>
+
+            <button class="btn-secondary">
+              <nuxt-link to="/product/"> See Product </nuxt-link>
+            </button>
+          </div>
         </div>
-      </div>
-
-      <div class="zx7 flex flex-col items-start justify-center">
-        <h4 class="text-black mb-9">ZX7 speaker</h4>
-
-        <button class="btn-secondary">See product</button>
-      </div>
-
-      <div class="yx1 flex items-center justify-between gap-10">
-        <div class="earphone-img">
-          <img
-            src="@/assets/images/home/desktop/image-earphones-yx1.jpg"
-            alt="earphone yx1"
-          />
-        </div>
-
-        <div class="content flex flex-col items-start justify-center">
-          <h4 class="text-black mb-8">YX1 earphones</h4>
-
-          <button class="btn-secondary">See product</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrapper more-info flex items-center justify-between gap-8">
-      <div class="content">
-        <h2 class="text-black mb-8">
-          Bringing you the <br />
-          <span> best </span> audio gear
-        </h2>
-        <p class="opacity-50">
-          Located at the heart of New York City, Audiophile is the premier store
-          for high end headphones, earphones, speakers, and audio accessories.
-          We have a large showroom and luxury demonstration rooms available for
-          you to browse and experience a wide range of our products. Stop by our
-          store to meet some of the fantastic people who make Audiophile the
-          best place to buy your portable audio equipment.
-        </p>
-      </div>
-      <div class="image">
-        <img
-          src="@/assets/images/shared/desktop/image-best-gear.jpg"
-          alt="best gear"
-        />
-      </div>
-    </section>
-
-    <main-footer />
+      </section>
+    </main>
   </div>
 </template>
 
@@ -138,15 +119,12 @@ export default Vue.extend({
     }
   }
 }
-
-.categories {
-  gap: 30px;
+main {
   padding-top: 128px;
-  padding-bottom: 168px;
 }
 
 .products {
-  padding-bottom: 168px;
+  padding-top: 168px;
 
   .zx9 {
     height: 560px;
@@ -202,33 +180,6 @@ export default Vue.extend({
       width: 100%;
       height: 320px;
       background-color: var(--gray-one);
-      border-radius: 8px;
-    }
-  }
-}
-
-.more-info {
-  padding-bottom: 200px;
-  .content {
-    width: 50%;
-    // width: 445px;
-
-    p {
-      width: 445px;
-    }
-
-    h2 span {
-      color: var(--primary);
-    }
-  }
-
-  .image {
-    // margin-left: 125px;
-    width: 50%;
-    // width: 540px;
-    height: 588px;
-
-    img {
       border-radius: 8px;
     }
   }

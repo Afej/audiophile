@@ -1,24 +1,26 @@
 <template>
   <header class="flex items-center justify-between wrapper">
-    <div class="logo">
-      <img src="@/assets/images/shared/desktop/logo.svg" alt="audiophile" />
+    <div class="flex items-center justify-between">
+      <nuxt-link to="/" class="logo mr-48 cursor-pointer">
+        <img src="@/assets/images/shared/desktop/logo.svg" alt="audiophile" />
+      </nuxt-link>
+      <ul class="nav flex items-center justify-between">
+        <li>
+          <nuxt-link to="/"> Home </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/category/headphones"> Headphones </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/category/speakers"> Speakers </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/category/earphones"> Earphones </nuxt-link>
+        </li>
+      </ul>
     </div>
-    <ul class="nav flex items-center justify-between">
-      <li>
-        <nuxt-link to="/"> Home </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/"> Headphones </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/"> Speakers </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/"> Earphones </nuxt-link>
-      </li>
-    </ul>
 
-    <div class="cart">
+    <div class="cart-img">
       <img src="@/assets/images/shared/desktop/icon-cart.svg" alt="cart" />
     </div>
   </header>
@@ -51,7 +53,7 @@ header {
       font-size: 13px;
       line-height: 25px;
       letter-spacing: 2px;
-      transition: all 500ms ease-in-out;
+      transition: all 250ms ease-in-out;
 
       &:hover {
         color: var(--primary);
@@ -60,7 +62,7 @@ header {
   }
 }
 
-.cart {
+.cart-img {
   width: 23.33px;
   height: 20px;
   cursor: pointer;
