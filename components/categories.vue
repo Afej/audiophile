@@ -1,5 +1,15 @@
 <template>
-  <section class="wrapper categories flex items-center justify-between">
+  <section
+    class="
+      wrapper
+      categories
+      flex
+      md:flex-row
+      flex-col
+      items-center
+      justify-between
+    "
+  >
     <category />
     <category />
     <category />

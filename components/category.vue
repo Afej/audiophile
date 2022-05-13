@@ -38,6 +38,10 @@ export default Vue.extend({
   padding-bottom: 10px;
   z-index: 1;
 
+  @media (max-width: 568px) {
+    margin-bottom: 100px;
+  }
+
   &-img {
     position: absolute;
     top: -75px;

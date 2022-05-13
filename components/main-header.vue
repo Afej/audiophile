@@ -18,7 +18,7 @@
             @click="toggleNav"
           ></i>
         </div>
-        <nuxt-link to="/" class="logo mr-48 cursor-pointer">
+        <nuxt-link to="/" class="logo lg:mr-48 cursor-pointer">
           <img src="@/assets/images/shared/desktop/logo.svg" alt="audiophile" />
         </nuxt-link>
       </div>

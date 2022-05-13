@@ -5,7 +5,15 @@
       <main-header />
 
       <div class="wrapper flex justify-center lg:justify-start">
-        <div class="hero-content flex flex-col items-start text-white">
+        <div
+          class="
+            hero-content
+            flex flex-col
+            lg:items-start
+            items-center
+            text-white
+          "
+        >
           <p class="overline opacity-50">NEW PRODUCT</p>
           <h1>XX99 Mark II Headphones</h1>
           <p class="text opacity-75">
@@ -25,7 +33,19 @@
 
       <!-- products -->
       <section class="wrapper products flex flex-col justify-between gap-10">
-        <div class="zx9 relative flex justify-end items-center overflow-hidden">
+        <div
+          class="
+            zx9
+            relative
+            flex
+            lg:flex-row
+            flex-col
+            lg:justify-end
+            justify-center
+            items-center
+            overflow-hidden
+          "
+        >
           <div class="patterns absolute">
             <img
               src="@/assets/images/home/desktop/pattern-circles.svg"
@@ -64,7 +84,17 @@
           </button>
         </div>
 
-        <div class="yx1 flex items-center justify-between gap-10">
+        <div
+          class="
+            yx1
+            flex
+            md:flex-row
+            flex-col
+            items-center
+            justify-between
+            gap-10
+          "
+        >
           <div class="earphone-img">
             <img
               src="@/assets/images/home/desktop/image-earphones-yx1.jpg"
@@ -106,12 +136,31 @@ export default Vue.extend({
   @media (max-width: 768px) {
     background: url('@/assets/images/home/tablet/image-header.jpg') no-repeat
       center center;
-      // height: 100%;
+    // height: 100%;
+  }
+
+  @media (max-width: 568px) {
+    background: url('@/assets/images/home/mobile/image-header.jpg') no-repeat
+      center center;
+    // height: 100%;
   }
 
   &-content {
     margin-top: 128px;
     width: 398px;
+
+    @media (max-width: 568px) {
+      width: 100%;
+      text-align: center;
+
+      h1 {
+        font-size: 32px;
+      }
+
+      p.text {
+        width: 100% !important;
+      }
+    }
 
     p.overline {
       margin-bottom: 24px;
@@ -135,25 +184,66 @@ main {
 .products {
   padding-top: 168px;
 
+  @media (max-width: 768px) {
+    padding-top: 80px;
+  }
+
   .zx9 {
     height: 560px;
     background: var(--primary);
     border-radius: 8px;
     padding: 0 95px 0 118px;
 
+    @media (max-width: 768px) {
+      height: 720px;
+    }
+
     &-img {
       width: 410.23px;
       height: 493px;
       left: 118px;
+
+      @media (max-width: 768px) {
+        width: 197.21px;
+        height: 237px;
+        left: 35%;
+        top: 52px;
+      }
+
+      @media (max-width: 568px) {
+        width: 197.21px;
+        height: 237px;
+        left: 25%;
+        top: 52px;
+      }
     }
 
     .patterns {
       top: -60px;
       left: -150px;
+
+      @media (max-width: 768px) {
+        left: -10px;
+        top: 0px;
+      }
     }
 
     .content {
       width: 349px;
+
+      @media (max-width: 768px) {
+        margin-top: 300px;
+        text-align: center;
+      }
+
+      @media (max-width: 568px) {
+        width: 280px;
+
+        h1 {
+          font-size: 36px;
+          line-height: 40px;
+        }
+      }
     }
 
     button {
@@ -173,6 +263,14 @@ main {
     background-size: cover;
     padding: 0 95px;
     border-radius: 8px;
+
+    @media (max-width: 768px) {
+      padding: 0 60px;
+    }
+
+    @media (max-width: 568px) {
+      padding: 0 30px;
+    }
   }
 
   .yx1 {
@@ -190,6 +288,10 @@ main {
       height: 320px;
       background-color: var(--gray-one);
       border-radius: 8px;
+
+      @media (max-width: 768px) {
+        padding-left: 30px;
+      }
     }
   }
 }
