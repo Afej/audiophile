@@ -4,7 +4,7 @@
     <div class="hero">
       <main-header />
 
-      <div class="wrapper">
+      <div class="wrapper flex justify-center lg:justify-start">
         <div class="hero-content flex flex-col items-start text-white">
           <p class="overline opacity-50">NEW PRODUCT</p>
           <h1>XX99 Mark II Headphones</h1>
@@ -19,6 +19,7 @@
         </div>
       </div>
     </div>
+
     <main>
       <categories />
 
@@ -102,6 +103,12 @@ export default Vue.extend({
   -o-background-size: cover;
   background-size: cover;
 
+  @media (max-width: 768px) {
+    background: url('@/assets/images/home/tablet/image-header.jpg') no-repeat
+      center center;
+      // height: 100%;
+  }
+
   &-content {
     margin-top: 128px;
     width: 398px;
@@ -120,6 +127,7 @@ export default Vue.extend({
     }
   }
 }
+
 main {
   padding-top: 128px;
 }

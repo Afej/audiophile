@@ -2,17 +2,17 @@
   <header
     class="
       flex
-      md:items-center
+      lg:items-center
       items-start
       justify-between
       wrapper
-      md:py-8
+      lg:py-8
       py-6
     "
   >
-    <div class="md:flex md:items-center justify-between">
+    <div class="lg:flex lg:items-center justify-between">
       <div class="flex justify-between items-center gap-11">
-        <div class="md:hidden icon text-2xl text-white duration-500">
+        <div class="lg:hidden icon text-2xl text-white duration-500">
           <i
             :class="[open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars']"
             @click="toggleNav"
@@ -26,14 +26,14 @@
       <ul
         class="
           nav
-          md:flex md:items-center
+          lg:flex lg:items-center
           justify-between
           text-white
-          md:py-0
+          lg:py-0
           py-10
-          md:w-auto
+          lg:w-auto
           w-full
-          md:static
+          lg:static
           absolute
           top-14
           duration-700
@@ -67,7 +67,7 @@
 export default {
   data() {
     return {
-      open: true,
+      open: false,
     }
   },
   methods: {
