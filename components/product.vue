@@ -21,10 +21,18 @@ export default {}
 
 <style lang="scss" scoped>
 .product {
+  @media (max-width: 568px) {
+    width: 100%;
+  }
+
   .image {
     height: 318px;
     width: 100%;
     // width: 350px;
+
+    @media (max-width: 568px) {
+      height: 120px;
+    }
 
     img {
       border-radius: 8px;

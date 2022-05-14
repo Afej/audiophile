@@ -12,7 +12,18 @@
     </div>
 
     <main class="wrapper flex flex-col gap-32">
-      <div class="product flex items-center justify-between">
+      <div
+        class="
+          product
+          flex
+          lg:flex-row
+          flex-col
+          items-center
+          justify-between
+          lg:gap-0
+          gap-10
+        "
+      >
         <div class="product-image">
           <img
             src="@/assets/images/shared/desktop/image-xx99-mark-two-headphones.jpg"
@@ -35,7 +46,18 @@
         </div>
       </div>
 
-      <div class="product flex items-center justify-between">
+      <div
+        class="
+          product
+          flex
+          lg:flex-row
+          flex-col
+          items-center
+          justify-between
+          gap-10
+          lg:gap-5
+        "
+      >
         <div class="content flex flex-col items-start">
           <h1>XX99 Mark I Headphones</h1>
           <p class="text">
@@ -57,7 +79,18 @@
         </div>
       </div>
 
-      <div class="product flex items-center justify-between">
+      <div
+        class="
+          product
+          flex
+          lg:flex-row
+          flex-col
+          items-center
+          justify-between
+          gap-10
+          lg:gap-0
+        "
+      >
         <div class="product-image">
           <img
             src="@/assets/images/shared/desktop/image-xx59-headphones.jpg"
@@ -97,12 +130,21 @@ export default {}
 
 main {
   padding: 160px 0;
+
+  @media (max-width: 768px) {
+    padding: 80px 0 160px;
+  }
 }
 
 .product {
   .product-image {
     width: 540px;
     height: 560px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 352px;
+    }
 
     img {
       border-radius: 8px;
@@ -113,6 +155,13 @@ main {
     width: 50%;
     padding-left: 65px;
 
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      padding-left: 0;
+    }
+
     p.overline {
       margin-bottom: 24px;
       color: var(--primary);
@@ -120,17 +169,30 @@ main {
 
     h1 {
       margin-bottom: 32px;
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+        line-height: 38px;
+      }
     }
 
     p.text {
       width: 398px;
       margin-bottom: 40px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 
   &:nth-of-type(2) {
     .content {
       padding-left: 0;
+
+      @media (max-width: 768px) {
+        order: 2;
+      }
     }
   }
 }
